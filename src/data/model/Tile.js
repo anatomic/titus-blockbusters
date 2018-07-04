@@ -3,7 +3,7 @@ import { taggedSum } from "daggy";
 export const Tile = taggedSum("Tile", {
   Available: ["char"],
   Selected: ["char"],
-  Won: ["player"]
+  Won: ["colour"]
 });
 
 export const select = tile =>

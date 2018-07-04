@@ -28,7 +28,11 @@ const letters = [
   "q",
   "r",
   "s",
-  "t"
+  "t",
+  "u",
+  "v",
+  "w",
+  "y"
 ];
 
 const randIndex = items => Math.floor(Math.random() * (items.length - 1));
@@ -40,7 +44,12 @@ export const Game = taggedSum("Game", {
   Complete: ["tiles"]
 });
 
-Game.of = () => Game.NotStarted(shuffle(letters).map(c => Available(c)));
+Game.of = () =>
+  Game.NotStarted(
+    shuffle(letters)
+      .slice(0, 20)
+      .map(c => Available(c))
+  );
 
 Game.start = game =>
   game.cata({
@@ -76,7 +85,7 @@ Game.setTileWinner = p => g =>
     Selectable: () => g,
     Active: tiles => {
       const activeTile = tiles.findIndex(t => Tile.Selected.is(t));
-      tiles[activeTile] = Tile.Won(p);
+      tiles[activeTile] = Tile.Won(p.colour);
       return Game.Selectable(tiles);
     },
     Complete: () => g

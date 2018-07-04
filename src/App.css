@@ -84,14 +84,26 @@
   border-right: 34.64px solid #f5b745;
 }
 
-.tile.is-selected {
+.flash-blue .tiles .tile--blue,
+.flash-white .tiles .tile--white {
+    animation-play-state: running;
+}
+
+.no-flash.flash-blue .tiles .tile---blue,
+.no-flash.flash-white .tiles .tile--white {
+    animation-play-state: paused;
+}
+
+.tile.is-selected,
+.flash-blue .tiles .tile--blue,
+.flash-white .tiles .tile--white {
   animation-direction: alternate;
   animation-name: selected-tile;
   -webkit-animation-duration: 0.75s;
   -moz-animation-duration: 0.75s;
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 

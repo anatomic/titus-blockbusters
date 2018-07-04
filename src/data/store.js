@@ -23,8 +23,8 @@ const createReducer = strategies => ({ type, payload }) =>
     .map(applyTo(payload))
     .chain(safe(isSameType(State)));
 
-const player1 = Player("Bet", "blue");
-const player2 = Player("Account", "white");
+const player1 = Player("Bet", "blue", false);
+const player2 = Player("Account", "white", false);
 
 const initialState = {
   player1,
@@ -36,6 +36,10 @@ const game = {
   START: startRound,
   SELECT_TILE: selectTile,
   CORRECT_ANSWER: commitAnswer
+};
+
+const player = {
+  ONE_AWAY: p => p
 };
 
 const reducers = combineReducers([createReducer(game)]);

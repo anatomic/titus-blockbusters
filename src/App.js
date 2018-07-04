@@ -1,18 +1,27 @@
 import React, { Component } from "react";
 import PropTypes from "proptypes";
 import { connect } from "react-redux";
+import c from "classnames";
 import identity from "crocks/combinators/identity";
 import isDefined from "crocks/predicates/isDefined";
 import "./App.css";
+import { Game } from "./data/model/Game";
 
 class App extends Component {
   render() {
+    const classes = c({
+      [`flash-${this.props.player1.colour}`]: this.props.player1.oneAway,
+      [`flash-${this.props.player2.colour}`]: this.props.player2.oneAway,
+      "no-flash": Game.Active.is(this.props.game) || Game.Complete.is(this.props.game),
+      game: true
+    });
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Titus Blockbusters</h1>
         </header>
-        <div className="game">
+        <div className={classes}>
           {this.props.game.cata({
             NotStarted: tiles => <Board tiles={tiles} />,
             Selectable: tiles => (
@@ -119,13 +128,25 @@ class BoardTile extends Component {
     const extra = column === 1 || column === 3 ? 62.5 : 0;
     return (
       <div
-        style={{ top: row * 125 + extra, left: column * 108, position: "absolute" }}
+        style={{
+          top: row * 125 + extra,
+          left: column * 108,
+          position: "absolute"
+        }}
         onClick={this.handleClick}
       >
         {tile.cata({
-          Available: char => <div className="tile"><span className="tile-char">{char}</span></div>,
-          Selected: char => <div className="tile is-selected"><span className="tile-char">{char}</span></div>,
-          Won: player => <div className={`tile is-won tile--${player.colour}`}></div>
+          Available: char => (
+            <div className="tile">
+              <span className="tile-char">{char}</span>
+            </div>
+          ),
+          Selected: char => (
+            <div className="tile is-selected">
+              <span className="tile-char">{char}</span>
+            </div>
+          ),
+          Won: colour => <div className={`tile is-won tile--${colour}`} />
         })}
       </div>
     );

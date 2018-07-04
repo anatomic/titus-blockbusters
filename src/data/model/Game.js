@@ -1,11 +1,8 @@
 import { taggedSum } from "daggy";
-import State from "crocks/State";
-import assoc from "crocks/helpers/assoc";
 import shuffle from "array-shuffle";
 
 import { Tile, select } from "./Tile";
 
-const { get, modify } = State;
 const { Available } = Tile;
 
 const letters = [
@@ -51,7 +48,7 @@ Game.of = () =>
       .map(c => Available(c))
   );
 
-Game.start = game =>
+export const start = game =>
   game.cata({
     NotStarted: tiles => {
       const idx = randIndex(tiles);
@@ -63,7 +60,7 @@ Game.start = game =>
     Complete: () => game
   });
 
-Game.pickTile = t => g =>
+export const pickTile = t => g =>
   g.cata({
     NotStarted: () => g,
     Active: () => g,
@@ -79,7 +76,7 @@ Game.pickTile = t => g =>
     }
   });
 
-Game.setTileWinner = p => g =>
+export const setTileWinner = p => g =>
   g.cata({
     NotStarted: () => g,
     Selectable: () => g,
@@ -90,21 +87,3 @@ Game.setTileWinner = p => g =>
     },
     Complete: () => g
   });
-
-const pickGameFromState = ({ game }) => game;
-const commitGameToState = game => modify(assoc("game", game));
-
-export const startRound = () =>
-  get(pickGameFromState)
-    .map(Game.start)
-    .chain(commitGameToState);
-
-export const selectTile = t =>
-  get(pickGameFromState)
-    .map(Game.pickTile(t))
-    .chain(commitGameToState);
-
-export const commitAnswer = player =>
-  get(pickGameFromState)
-    .map(Game.setTileWinner(player))
-    .chain(commitGameToState);

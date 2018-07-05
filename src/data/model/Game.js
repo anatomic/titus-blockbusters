@@ -38,7 +38,7 @@ export const Game = taggedSum("Game", {
   NotStarted: ["tiles"],
   Selectable: ["tiles"],
   Active: ["tiles"],
-  Complete: ["tiles"]
+  Complete: ["tiles", "winner"]
 });
 
 Game.of = () =>
@@ -60,15 +60,15 @@ export const start = game =>
     Complete: () => game
   });
 
-export const pickTile = t => g =>
-  g.cata({
-    NotStarted: () => g,
-    Active: () => g,
-    Complete: () => g,
+export const pickTile = char => game =>
+  game.cata({
+    NotStarted: () => game,
+    Active: () => game,
+    Complete: () => game,
     Selectable: tiles => {
-      const idx = tiles.findIndex(t1 => t1 === t);
+      const idx = tiles.findIndex(t => t.char === char);
       if (idx === -1 || Tile.Won.is(tiles[idx])) {
-        return g;
+        return game;
       }
 
       tiles[idx] = select(tiles[idx]);
@@ -76,14 +76,14 @@ export const pickTile = t => g =>
     }
   });
 
-export const setTileWinner = p => g =>
-  g.cata({
-    NotStarted: () => g,
-    Selectable: () => g,
+export const setTileWinner = player => game =>
+  game.cata({
+    NotStarted: () => game,
+    Selectable: () => game,
     Active: tiles => {
       const activeTile = tiles.findIndex(t => Tile.Selected.is(t));
-      tiles[activeTile] = Tile.Won(p.colour);
+      tiles[activeTile] = Tile.Won(player.colour);
       return Game.Selectable(tiles);
     },
-    Complete: () => g
+    Complete: () => game
   });

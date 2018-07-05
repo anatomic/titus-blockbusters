@@ -1,0 +1,181 @@
+
+.game {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.board {
+    position: relative;
+    padding: 40px;
+    width: 572px;
+    height: 558px;
+    overflow: hidden;
+}
+
+.tiles {
+    position: absolute;
+}
+
+.tiles .tile {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.tile {
+    font-family: "Aldrich", sans-serif;
+    font-size: 60px;
+    text-transform: capitalize;
+    position: absolute;
+    z-index: 5;
+    width: 69.28px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 34.64px;
+    background-color: var(--neutral);
+    background-image: radial-gradient(circle at center, var(--neutral-light) 0, var(--neutral) 50%);
+}
+
+.tile:before,
+.tile:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+}
+
+.tile:before {
+    left: 100%;
+    border-left: 34.64px solid var(--neutral);
+}
+
+.tile:after {
+    right: 100%;
+    border-right: 34.64px solid var(--neutral);
+}
+
+.flash-blue .tiles .tile--blue,
+.flash-white .tiles .tile--white {
+    animation-play-state: running;
+}
+
+.no-flash.flash-blue .tiles .tile---blue,
+.no-flash.flash-white .tiles .tile--white {
+    animation-play-state: paused;
+}
+
+.tile.is-selected,
+.flash-blue .tiles .tile--blue,
+.flash-white .tiles .tile--white {
+    animation-direction: alternate;
+    animation-name: selected-tile;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.tile-char {
+    margin-top: 9px;
+}
+
+.tile--white {
+    background-color: var(--white);
+    background-image: none;
+}
+
+.tile--white:before {
+    border-left-color: var(--white);
+}
+
+.tile--white:after {
+    border-right-color: var(--white);
+}
+
+.tile--blue {
+    background-color: var(--blue);
+    background-image: none;
+}
+
+.tile--blue:before {
+    border-left-color: var(--blue);
+}
+
+.tile--blue:after {
+    border-right-color: var(--blue);
+}
+
+.tile-row--top {
+    position: absolute;
+    top: -85px;
+}
+
+.tile-row--bottom {
+    position: absolute;
+    bottom: 98px;
+}
+
+.tile-row .tile:nth-child(2) {
+    left: 108px;
+    top: 62.5px;
+}
+
+.tile-row .tile:nth-child(3) {
+    left: 216px;
+}
+
+.tile-row .tile:nth-child(4) {
+    left: 324px;
+    top: 62.5px;
+}
+
+.tile-row .tile:nth-child(5) {
+    left: 432px;
+}
+
+.tile-column--left {
+    position: absolute;
+    top: -23.5px;
+    left: -68px;
+}
+
+.tile-column--right {
+    position: absolute;
+    top: -23.5px;
+    right: 72px;
+}
+
+.tile-column .tile:nth-child(1) {
+    top: 125px;
+}
+
+.tile-column .tile:nth-child(2) {
+    top: 250px;
+}
+
+.tile-column .tile:nth-child(3) {
+    top: 375px;
+}
+
+.tile-column .tile:nth-child(4) {
+    top: 500px;
+}
+
+.tile-column .tile:nth-child(5) {
+    top: 625px;
+}
+
+@keyframes selected-tile {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

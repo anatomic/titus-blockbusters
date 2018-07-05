@@ -2,4 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+    color: var(--white);
+    background: #000;
+    /*background-image: url("./assets/shocked-bob.jpg");*/
+    /*background-size: cover;*/
 }

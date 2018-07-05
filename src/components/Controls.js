@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fromEvent } from "most";
 import PropTypes from "proptypes";
+import "./Controls.css";
 
 import { PlayerPropTypes } from "../data/model/Player";
 
@@ -14,21 +15,41 @@ export const Controls = ({
 }) => (
   <div className="controls">
     {game.cata({
-      NotStarted: () => <button onClick={startGame}>Start Game</button>,
+      NotStarted: () => (
+        <button onClick={startGame} className="c-start-btn c-btn">
+          Start Game
+        </button>
+      ),
       Selectable: () => (
         <div>
           Select a tile
-          <KeyControls onTileClick={onTileClick} />
+          <KeyControls onKeyPress={onTileClick} />
         </div>
       ),
       Active: () => (
         <div>
-          <button onClick={() => onCorrectAnswer(player1)}>
+          <button className="c-btn" onClick={() => onCorrectAnswer(player1)}>
             {player1.name}
           </button>
-          <button onClick={() => onCorrectAnswer(player2)}>
+          <button className="c-btn" onClick={() => onCorrectAnswer(player2)}>
             {player2.name}
           </button>
+          <KeyControls
+            onKeyPress={key => {
+              switch (key) {
+                case "1":
+                case "b": {
+                  onCorrectAnswer(player1);
+                  break;
+                }
+                case "2":
+                case "w": {
+                  onCorrectAnswer(player2);
+                  break;
+                }
+              }
+            }}
+          />
         </div>
       ),
       Complete: () => null
@@ -52,7 +73,7 @@ const keyListener = fromEvent("keyup", window).map(({ key }) =>
 class KeyControls extends Component {
   componentDidMount() {
     this.subscription = keyListener.subscribe({
-      next: this.props.onTileClick,
+      next: this.props.onKeyPress,
       error: () => this.subscription.unsubscribe(),
       complete: () => this.subscription.unsubscribe()
     });
@@ -68,7 +89,7 @@ class KeyControls extends Component {
 }
 
 KeyControls.propTypes = {
-  onTileClick: PropTypes.func
+  onKeyPress: PropTypes.func
 };
 
 export default Controls;

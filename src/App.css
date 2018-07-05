@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich");
 
 :root {
-    --neutral: #f5b745;
-    --neutral-light: #f5d475;
-    --blue: #2392e7;
-    --white: #fff;
+  --neutral: #f5b745;
+  --neutral-light: #f5d475;
+  --blue: #2392e7;
+  --white: #fff;
+  --radius: 6px;
 }
 
 .App {
+  display: flex;
+    flex-direction: column;
+    position: relative;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header {

@@ -1,0 +1,12 @@
+.c-btn {
+    font-size: 32px;
+    font-family: "Aldrich", sans-serif;
+    border-radius: var(--radius);
+    padding: 1em 2em;
+}
+
+.c-start-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+}

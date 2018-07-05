@@ -12,9 +12,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Titus Blockbusters</h1>
-        </header>
         <Board
           game={this.props.game}
           player1={this.props.player1}
@@ -50,4 +47,7 @@ const mapDispatchToProps = dispatch => ({
   onCorrectAnswer: team => dispatch({ type: "CORRECT_ANSWER", payload: team })
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

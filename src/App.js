@@ -3,29 +3,47 @@ import PropTypes from "proptypes";
 import { connect } from "react-redux";
 import identity from "crocks/combinators/identity";
 import "./App.css";
-import { PlayerPropTypes } from "./data/model/Player";
-
-import Board from "./components/Board";
-import Controls from "./components/Controls";
+import { GameUI } from "./components/Game";
+import intro from "./assets/intro.mp4";
 
 class App extends Component {
+  renderGame = () => {
+    return (
+      <GameUI
+        game={this.props.game}
+        players={this.props.players}
+        onCorrectAnswer={this.props.onCorrectAnswer}
+        onIncorrectAnswer={this.props.onIncorrectAnswer}
+        onPlayerBuzz={this.props.onPlayerBuzz}
+        onTileClick={this.props.onTileClick}
+      />
+    );
+  };
+
   render() {
+    const { game } = this.props;
     return (
       <div className="App">
-        <Board
-          game={this.props.game}
-          player1={this.props.player1}
-          player2={this.props.player2}
-          onTileClick={this.props.onTileClick}
-        />
-        <Controls
-          game={this.props.game}
-          onCorrectAnswer={this.props.onCorrectAnswer}
-          player1={this.props.player1}
-          player2={this.props.player2}
-          startGame={this.props.startGame}
-          onTileClick={this.props.onTileClick}
-        />
+        {game.cata({
+          NotStarted: () => (
+            <div onClick={this.props.playIntro}>Play Intro</div>
+          ),
+          Intro: () => (
+            <div>
+              <video
+                src={intro}
+                autoPlay={true}
+                playsInline={true}
+                className="intro"
+                onEnded={() => this.props.startGame()}
+              />
+            </div>
+          ),
+          Selectable: this.renderGame,
+          Asking: this.renderGame,
+          Answering: this.renderGame,
+          Complete: this.renderGame
+        })}
       </div>
     );
   }
@@ -33,21 +51,21 @@ class App extends Component {
 
 App.propTypes = {
   game: PropTypes.object,
-  player1: PlayerPropTypes,
-  player2: PlayerPropTypes,
+  players: PropTypes.object,
   onCorrectAnswer: PropTypes.func,
-  startGame: PropTypes.func,
-  onTileClick: PropTypes.func
+  onTileClick: PropTypes.func,
+  playIntro: PropTypes.func,
+  startGame: PropTypes.func
 };
 
 const mapStateToProps = identity;
 const mapDispatchToProps = dispatch => ({
+  onCorrectAnswer: () => dispatch({ type: "CORRECT_ANSWER" }),
+  onIncorrectAnswer: () => dispatch({ type: "INCORRECT_ANSWER" }),
+  onPlayerBuzz: player => dispatch({ type: "BUZZER", payload: player }),
   onTileClick: char => dispatch({ type: "SELECT_TILE", payload: char }),
-  startGame: () => dispatch({ type: "START" }),
-  onCorrectAnswer: team => dispatch({ type: "CORRECT_ANSWER", payload: team })
+  playIntro: () => dispatch({ type: "PLAY_INTRO" }),
+  startGame: () => dispatch({ type: "START" })
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

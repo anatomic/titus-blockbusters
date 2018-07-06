@@ -9,14 +9,7 @@
 }
 
 .App {
-  /*display: flex;*/
-    /*flex-direction: column;*/
-    /*position: relative;*/
   text-align: center;
-  /*width: 100vw;*/
-  /*height: 100vh;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
 }
 
 .App-header {
@@ -24,4 +17,15 @@
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.intro {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height:100vh;
+    width: auto;
+    height: auto;
+    z-index: -10;
 }

@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "proptypes";
-import c from "classnames";
 import "./Board.css";
-
-import { Game } from "../data/model/Game";
 
 class Board extends Component {
   renderTiles = tiles => {
@@ -18,53 +15,47 @@ class Board extends Component {
   };
 
   render() {
-    const classes = c({
-      [`flash-${this.props.player1.colour}`]: this.props.player1.oneAway,
-      [`flash-${this.props.player2.colour}`]: this.props.player2.oneAway,
-      "no-flash":
-        Game.Active.is(this.props.game) || Game.Complete.is(this.props.game),
-      game: true
-    });
-    const tiles = this.props.game.cata({
-      NotStarted: this.renderTiles,
-      Selectable: this.renderTiles,
-      Active: this.renderTiles,
-      Complete: () => <div>Complete</div>
-    });
     return (
-      <div className={classes}>
-        <div className="board">
-          <div className="tile-column tile-column--left">
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-          </div>
-          <div className="tile-row tile-row--top">
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-          </div>
-          <div className="tiles">{tiles}</div>
-          <div className="tile-row tile-row--bottom">
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-            <div className="tile tile--white" />
-          </div>
-          <div className="tile-column tile-column--right">
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-            <div className="tile tile--blue" />
-          </div>
+      <div className="board">
+        <div className="tile-column tile-column--left">
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+        </div>
+        <div className="tile-row tile-row--top">
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+        </div>
+        <div className="tiles">
+          {this.props.game.cata({
+            NotStarted: () => null,
+            Intro: () => null,
+            Selectable: this.renderTiles,
+            Asking: this.renderTiles,
+            Answering: this.renderTiles,
+            Complete: this.renderTiles
+          })}
+        </div>
+        <div className="tile-row tile-row--bottom">
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+          <div className="tile tile--white" />
+        </div>
+        <div className="tile-column tile-column--right">
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
+          <div className="tile tile--blue" />
         </div>
       </div>
     );
@@ -84,15 +75,13 @@ class BoardTile extends Component {
     const row = Math.floor(idx / 5);
     const column = idx % 5;
     const extra = column === 1 || column === 3 ? 62.5 : 0;
+    const style = {
+      top: row * 125 + extra,
+      left: column * 108,
+      position: "absolute"
+    };
     return (
-      <div
-        style={{
-          top: row * 125 + extra,
-          left: column * 108,
-          position: "absolute"
-        }}
-        onClick={this.handleClick}
-      >
+      <div style={style} onClick={this.handleClick}>
         {tile.cata({
           Available: char => (
             <div className="tile">

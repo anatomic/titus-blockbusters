@@ -1,20 +1,21 @@
 import { createStore, compose } from "redux";
 
+import Pair from "crocks/Pair";
 import reducer from "./reducers";
 import identity from "crocks/combinators/identity";
 
 import { Player } from "./model/Player";
-import { Game } from "./model/Game";
+import { Game, createTilesAndSelectRandom } from "./model/Game";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const player1 = Player("Bet", "blue", false);
-const player2 = Player("Account", "white", false);
+const player1 = Player.Inactive("Bet", "blue", 0, false);
+const player2 = Player.Inactive("Account", "white", 0, false);
 
 const initialState = {
-  player1,
-  player2,
-  game: Game.of()
+  players: Pair(player1, player2),
+  // game: Game.Asking(createTilesAndSelectRandom())
+  game: Game.NotStarted
 };
 
 export const store = createStore(

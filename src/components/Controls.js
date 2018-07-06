@@ -1,50 +1,41 @@
 import React, { Component } from "react";
 import { fromEvent } from "most";
+import fst from "crocks/Pair/fst";
+import snd from "crocks/Pair/snd";
 import PropTypes from "proptypes";
 import "./Controls.css";
-
-import { PlayerPropTypes } from "../data/model/Player";
 
 export const Controls = ({
   game,
   onCorrectAnswer,
+  onIncorrectAnswer,
   onTileClick,
-  player1,
-  player2,
-  startGame
+  players
 }) => (
   <div className="controls">
     {game.cata({
-      NotStarted: () => (
-        <button onClick={startGame} className="c-start-btn c-btn">
-          Start Game
-        </button>
-      ),
-      Selectable: () => (
+      NotStarted: () => null,
+      Selectable: () => <KeyControls onKeyPress={onTileClick} />,
+      Asking: () => null,
+      Answering: () => (
         <div>
-          Select a tile
-          <KeyControls onKeyPress={onTileClick} />
-        </div>
-      ),
-      Active: () => (
-        <div>
-          <button className="c-btn" onClick={() => onCorrectAnswer(player1)}>
-            {player1.name}
+          <button className="c-btn" onClick={onCorrectAnswer}>
+            Correct
           </button>
-          <button className="c-btn" onClick={() => onCorrectAnswer(player2)}>
-            {player2.name}
+          <button className="c-btn" onClick={onIncorrectAnswer}>
+            Incorrect
           </button>
           <KeyControls
             onKeyPress={key => {
               switch (key) {
                 case "1":
                 case "b": {
-                  onCorrectAnswer(player1);
+                  onCorrectAnswer(fst(players));
                   break;
                 }
                 case "2":
                 case "w": {
-                  onCorrectAnswer(player2);
+                  onCorrectAnswer(snd(players));
                   break;
                 }
               }
@@ -59,9 +50,9 @@ export const Controls = ({
 
 Controls.propTypes = {
   game: PropTypes.object,
-  player1: PlayerPropTypes,
-  player2: PlayerPropTypes,
+  players: PropTypes.object,
   onCorrectAnswer: PropTypes.func,
+  onIncorrectAnswer: PropTypes.func,
   startGame: PropTypes.func,
   onTileClick: PropTypes.func
 };

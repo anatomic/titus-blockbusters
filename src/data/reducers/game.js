@@ -1,6 +1,5 @@
 import State from "crocks/State";
 import assoc from "crocks/helpers/assoc";
-
 import { createReducer } from "../helpers";
 
 import {
@@ -47,10 +46,7 @@ const getActivePlayer = () =>
 const assignTileToPlayer = player =>
   get(pickGameFromState)
     .map(setTileWinner(player))
-    .chain(commitGameToState)
-    .chain(resetPlayers);
-
-const correctAnswer = () => getActivePlayer().chain(assignTileToPlayer);
+    .chain(commitGameToState);
 
 const selectPlayer = p =>
   get()
@@ -58,13 +54,21 @@ const selectPlayer = p =>
       ({ players, game }) =>
         Game.Asking.is(game) ? players.bimap(toggleEq(p), toggleEq(p)) : players
     )
-    .chain(commitPlayersToState)
+    .chain(commitPlayersToState);
+
+const buzzer = player =>
+  selectPlayer(player)
     .chain(answeringQuestion);
 
-const changePlayer = () =>
+const correctAnswer = () =>
+  getActivePlayer()
+    .chain(assignTileToPlayer)
+    .chain(resetPlayers)
+
+const incorrectAnswer = () =>
   get(({ players }) => players)
     .map(p => p.bimap(toggle, toggle))
-    .chain(commitPlayersToState);
+    .chain(commitPlayersToState)
 
 const resetPlayers = () =>
   get(({ players }) => players)
@@ -75,9 +79,9 @@ export const reducer = createReducer({
   PLAY_INTRO: playIntro,
   START: startRound,
   SELECT_TILE: selectTile,
-  BUZZER: selectPlayer,
+  BUZZER: buzzer,
   CORRECT_ANSWER: correctAnswer,
-  INCORRECT_ANSWER: changePlayer
+  INCORRECT_ANSWER: incorrectAnswer
 });
 
 export default reducer;

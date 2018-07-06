@@ -4,6 +4,10 @@ import PropTypes from "proptypes";
 import fst from "crocks/Pair/fst";
 import snd from "crocks/Pair/snd";
 
+import correctAnswer from "../assets/correct-answer.mp3"
+import incorrectAnswer from "../assets/wrong-answer.mp3";
+import buzzer from "../assets/buzzer.mp3";
+
 export const Controls = ({
   game,
   onCorrectAnswer,
@@ -20,9 +24,11 @@ export const Controls = ({
         onKeyPress={key => {
           switch (key) {
             case "arrowleft": {
+              new Audio(buzzer).play();
               return onPlayerBuzz(fst(players));
             }
             case "arrowright": {
+              new Audio(buzzer).play();
               return onPlayerBuzz(snd(players));
             }
           }
@@ -34,9 +40,11 @@ export const Controls = ({
         onKeyPress={key => {
           switch (key) {
             case " ": {
+              new Audio(correctAnswer).play();
               return onCorrectAnswer();
             }
             case "x": {
+              new Audio(incorrectAnswer).play();
               return onIncorrectAnswer();
             }
           }

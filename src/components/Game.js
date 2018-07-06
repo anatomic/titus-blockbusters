@@ -34,6 +34,7 @@ export class GameUI extends Component {
           onTileClick={this.props.onTileClick}
           onCorrectAnswer={this.props.onCorrectAnswer}
           onIncorrectAnswer={this.props.onIncorrectAnswer}
+          onPlayerBuzz={this.props.onPlayerBuzz}
           game={this.props.game}
           players={this.props.players}
         />

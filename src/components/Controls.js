@@ -1,58 +1,57 @@
 import React, { Component } from "react";
 import { fromEvent } from "most";
+import PropTypes from "proptypes";
 import fst from "crocks/Pair/fst";
 import snd from "crocks/Pair/snd";
-import PropTypes from "proptypes";
-import "./Controls.css";
 
 export const Controls = ({
   game,
   onCorrectAnswer,
   onIncorrectAnswer,
+  onPlayerBuzz,
   onTileClick,
   players
-}) => (
-  <div className="controls">
-    {game.cata({
-      NotStarted: () => null,
-      Selectable: () => <KeyControls onKeyPress={onTileClick} />,
-      Asking: () => null,
-      Answering: () => (
-        <div>
-          <button className="c-btn" onClick={onCorrectAnswer}>
-            Correct
-          </button>
-          <button className="c-btn" onClick={onIncorrectAnswer}>
-            Incorrect
-          </button>
-          <KeyControls
-            onKeyPress={key => {
-              switch (key) {
-                case "1":
-                case "b": {
-                  onCorrectAnswer(fst(players));
-                  break;
-                }
-                case "2":
-                case "w": {
-                  onCorrectAnswer(snd(players));
-                  break;
-                }
-              }
-            }}
-          />
-        </div>
-      ),
-      Complete: () => null
-    })}
-  </div>
-);
+}) =>
+  game.cata({
+    NotStarted: () => null,
+    Selectable: () => <KeyControls onKeyPress={onTileClick} />,
+    Asking: () => (
+      <KeyControls
+        onKeyPress={key => {
+          switch (key) {
+            case "arrowleft": {
+              return onPlayerBuzz(fst(players));
+            }
+            case "arrowright": {
+              return onPlayerBuzz(snd(players));
+            }
+          }
+        }}
+      />
+    ),
+    Answering: () => (
+      <KeyControls
+        onKeyPress={key => {
+          switch (key) {
+            case " ": {
+              return onCorrectAnswer();
+            }
+            case "x": {
+              return onIncorrectAnswer();
+            }
+          }
+        }}
+      />
+    ),
+    Complete: () => null
+  });
 
 Controls.propTypes = {
   game: PropTypes.object,
   players: PropTypes.object,
   onCorrectAnswer: PropTypes.func,
   onIncorrectAnswer: PropTypes.func,
+  onPlayerBuzz: PropTypes.func,
   startGame: PropTypes.func,
   onTileClick: PropTypes.func
 };
@@ -64,7 +63,7 @@ const keyListener = fromEvent("keyup", window).map(({ key }) =>
 class KeyControls extends Component {
   componentDidMount() {
     this.subscription = keyListener.subscribe({
-      next: this.props.onKeyPress,
+      next: key => this.props.onKeyPress(key),
       error: () => this.subscription.unsubscribe(),
       complete: () => this.subscription.unsubscribe()
     });
@@ -75,7 +74,7 @@ class KeyControls extends Component {
   }
 
   render() {
-    return <React.Fragment />;
+    return null;
   }
 }
 

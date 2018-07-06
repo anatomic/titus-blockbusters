@@ -12,8 +12,10 @@ class App extends Component {
       <GameUI
         game={this.props.game}
         players={this.props.players}
+        onBlockBusters={this.props.onBlockBusters}
         onCorrectAnswer={this.props.onCorrectAnswer}
         onIncorrectAnswer={this.props.onIncorrectAnswer}
+        onOneAway={this.props.onOneAway}
         onPlayerBuzz={this.props.onPlayerBuzz}
         onTileClick={this.props.onTileClick}
       />
@@ -51,9 +53,11 @@ class App extends Component {
 
 App.propTypes = {
   game: PropTypes.object,
-  players: PropTypes.object,
+  onBlockBusters: PropTypes.func,
   onCorrectAnswer: PropTypes.func,
+  onOneAway: PropTypes.func,
   onTileClick: PropTypes.func,
+  players: PropTypes.object,
   playIntro: PropTypes.func,
   startGame: PropTypes.func
 };
@@ -61,7 +65,9 @@ App.propTypes = {
 const mapStateToProps = identity;
 const mapDispatchToProps = dispatch => ({
   onCorrectAnswer: () => dispatch({ type: "CORRECT_ANSWER" }),
+  onBlockBusters: () => dispatch({ type: "BLOCKBUSTERS" }),
   onIncorrectAnswer: () => dispatch({ type: "INCORRECT_ANSWER" }),
+  onOneAway: player => dispatch({ type: "ONE_AWAY", payload: player }),
   onPlayerBuzz: player => dispatch({ type: "BUZZER", payload: player }),
   onTileClick: char => dispatch({ type: "SELECT_TILE", payload: char }),
   playIntro: () => dispatch({ type: "PLAY_INTRO" }),

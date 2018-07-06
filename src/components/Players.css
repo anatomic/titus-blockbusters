@@ -7,29 +7,58 @@
   left: 0;
   top: 0;
   z-index: -20;
+  --direction: top;
+  --start: -100%;
+  --end: 60%;
 }
 
 .player {
   display: flex;
   flex-basis: 0;
   flex-grow: 1;
+  flex-direction: column;
   justify-self: stretch;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 64px;
   font-family: "Aldrich", sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
-  border-bottom: 10px solid black;
+  border-top: 10px solid black;
+  padding-top: 10px;
   color: #5a5a5a;
 }
 
+.player-blue {
+    color: var(--blue);
+}
+
+.player-white {
+    color: var(--white);
+}
+
 .player-blue.is-active {
-  background-image: linear-gradient(to bottom, var(--blue) -40%, black 50%);
+  background-image: linear-gradient(
+    to var(--direction),
+    var(--blue) var(--start),
+    black var(--end)
+  );
   border-bottom-color: var(--blue);
 }
 
 .player-white.is-active {
-  background-image: linear-gradient(to bottom, var(--white) -40%, black 50%);
+  background-image: linear-gradient(
+    to var(--direction),
+    var(--white) var(--start),
+    black var(--end)
+  );
   border-bottom-color: var(--white);
+}
+
+.player-name {
+}
+
+.player-points {
+  font-size: 48px;
+  color: var(--neutral);
 }

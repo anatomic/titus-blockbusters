@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "proptypes";
+import c from "classnames";
 import fst from "crocks/Pair/fst";
 import snd from "crocks/Pair/snd";
 import "./Players.css";
@@ -23,17 +24,24 @@ Players.propTypes = {
   onClick: PropTypes.func
 };
 
-const PlayerPanel = ({ player, onClick }) => (
-  <div
-    className={`player player-${player.colour} ${
-      Player.Answering.is(player) ? "is-active" : ""
-    }`}
-    key={`player-${player.name}`}
-    onClick={() => onClick(player)}
-  >
-    {player.name}
-  </div>
-);
+export class PlayerPanel extends Component {
+  render() {
+    const { player, onClick } = this.props;
+    const { name, points, colour } = player;
+    const displayPoints = ("000" + points).slice(-3);
+    const classes = c({
+      player: true,
+      [`player-${colour}`]: true,
+      "is-active": Player.Answering.is(player)
+    });
+    return (
+      <div className={classes} onClick={() => onClick(player)}>
+        <span className="player-name">{name}</span>
+        <span className="player-points">{displayPoints}</span>
+      </div>
+    );
+  }
+}
 
 PlayerPanel.propTypes = {
   player: PlayerPropTypes,

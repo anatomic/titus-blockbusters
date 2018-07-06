@@ -118,3 +118,16 @@ export const setTileWinner = player => game =>
     },
     Complete: constant(game)
   });
+
+export const completeGame = player => game =>
+  game.cata({
+    NotStarted: constant(game),
+    Selectable: constant(game),
+    Asking: constant(game),
+    Answering: tiles => {
+      const activeTile = tiles.findIndex(t => Tile.Selected.is(t));
+      tiles[activeTile] = Tile.Won(player.colour);
+      return Game.Complete(tiles, player);
+    },
+    Complete: constant(game)
+  });

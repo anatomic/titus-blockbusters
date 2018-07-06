@@ -4,21 +4,40 @@ import PropTypes from "proptypes";
 import fst from "crocks/Pair/fst";
 import snd from "crocks/Pair/snd";
 
-import correctAnswer from "../assets/correct-answer.mp3"
+import correctAnswer from "../assets/correct-answer.mp3";
 import incorrectAnswer from "../assets/wrong-answer.mp3";
 import buzzer from "../assets/buzzer.mp3";
+import theme from "../assets/theme.mp3";
 
 export const Controls = ({
   game,
+  onBlockBusters,
   onCorrectAnswer,
   onIncorrectAnswer,
   onPlayerBuzz,
   onTileClick,
+  onOneAway,
   players
 }) =>
   game.cata({
     NotStarted: () => null,
-    Selectable: () => <KeyControls onKeyPress={onTileClick} />,
+    Selectable: () => (
+      <KeyControls
+        onKeyPress={key => {
+          switch (key) {
+            case "arrowleft": {
+              return onOneAway(fst(players));
+            }
+            case "arrowright": {
+              return onOneAway(snd(players));
+            }
+            default: {
+              return onTileClick(key);
+            }
+          }
+        }}
+      />
+    ),
     Asking: () => (
       <KeyControls
         onKeyPress={key => {
@@ -47,6 +66,10 @@ export const Controls = ({
               new Audio(incorrectAnswer).play();
               return onIncorrectAnswer();
             }
+            case "enter": {
+              new Audio(theme).play();
+              return onBlockBusters();
+            }
           }
         }}
       />
@@ -59,6 +82,7 @@ Controls.propTypes = {
   players: PropTypes.object,
   onCorrectAnswer: PropTypes.func,
   onIncorrectAnswer: PropTypes.func,
+  onOneAway: PropTypes.func,
   onPlayerBuzz: PropTypes.func,
   startGame: PropTypes.func,
   onTileClick: PropTypes.func

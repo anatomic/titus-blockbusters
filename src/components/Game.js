@@ -15,14 +15,15 @@ const playerClasses = players =>
 
 export class GameUI extends Component {
   render() {
-    const classes = c(
-      {
-        "no-flash":
-          Game.Answering.is(this.props.game) || Game.Asking.is(this.props.game),
-        game: true
-      },
-      playerClasses(this.props.players)
-    );
+    const flashTiles = this.props.game.cata({
+      NotStarted: () => ({}),
+      Intro: () => ({}),
+      Selectable: () => playerClasses(this.props.players),
+      Asking: () => ({ "no-flash": true }),
+      Answering: () => ({ "no-flash": true }),
+      Complete: (tiles, winner) => ({ [`flash-${winner.colour}`]: true })
+    });
+    const classes = c("game", flashTiles);
     return (
       <div className={classes}>
         <Board game={this.props.game} onTileClick={this.props.onTileClick} />
@@ -32,8 +33,10 @@ export class GameUI extends Component {
         />
         <Controls
           onTileClick={this.props.onTileClick}
+          onBlockBusters={this.props.onBlockBusters}
           onCorrectAnswer={this.props.onCorrectAnswer}
           onIncorrectAnswer={this.props.onIncorrectAnswer}
+          onOneAway={this.props.onOneAway}
           onPlayerBuzz={this.props.onPlayerBuzz}
           game={this.props.game}
           players={this.props.players}
@@ -46,8 +49,10 @@ export class GameUI extends Component {
 GameUI.propTypes = {
   game: PropTypes.object,
   players: PropTypes.object,
+  onBlockBusters: PropTypes.func,
   onCorrectAnswer: PropTypes.func,
   onIncorrectAnswer: PropTypes.func,
+  onOneAway: PropTypes.func,
   onPlayerBuzz: PropTypes.func,
   onTileClick: PropTypes.func
 };

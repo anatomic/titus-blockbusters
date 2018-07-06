@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69eea870-636c-4359-9f61-66735b2d6a1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Players.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Players.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Players.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Players.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/reducers/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/reducers/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +32,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="12698" />
+          <entry key="css" value="13686" />
           <entry key="html" value="70" />
-          <entry key="js" value="52664" />
+          <entry key="js" value="57876" />
           <entry key="json" value="35" />
         </counts>
       </usages-collector>
@@ -35,7 +42,7 @@
       <usages-collector id="statistics.php.composer.actions" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="11" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="34" />
@@ -44,15 +51,15 @@
       <usages-collector id="statistics.php.composer.command.options" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="12698" />
+          <entry key="CSS" value="13686" />
           <entry key="HTML" value="70" />
           <entry key="JSON" value="35" />
-          <entry key="JavaScript" value="52664" />
+          <entry key="JavaScript" value="57876" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
+          <entry key="css" value="11" />
           <entry key="html" value="2" />
           <entry key="js" value="34" />
           <entry key="json" value="3" />
@@ -66,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="378">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -81,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/reducers/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="342">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -93,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/model/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+            <state relative-caret-position="787">
+              <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -105,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/model/Player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+            <state relative-caret-position="198">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -115,19 +122,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Board.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="432">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -138,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="756">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -147,14 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Board.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Board.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="630">
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -162,8 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Players.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="252">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -172,10 +167,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Players.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Controls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="288">
+              <caret line="84" column="27" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -220,17 +224,17 @@
         <option value="$PROJECT_DIR$/src/components/Controls.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/Players.css" />
-        <option value="$PROJECT_DIR$/src/data/model/Game.js" />
-        <option value="$PROJECT_DIR$/src/components/Players.js" />
-        <option value="$PROJECT_DIR$/src/components/Board.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/data/model/Player.js" />
-        <option value="$PROJECT_DIR$/src/components/Game.js" />
-        <option value="$PROJECT_DIR$/src/data/reducers/game.js" />
         <option value="$PROJECT_DIR$/src/components/Board.js" />
-        <option value="$PROJECT_DIR$/src/components/Controls.js" />
+        <option value="$PROJECT_DIR$/src/components/Players.js" />
+        <option value="$PROJECT_DIR$/src/components/Players.css" />
         <option value="$PROJECT_DIR$/src/data/store.js" />
+        <option value="$PROJECT_DIR$/src/data/model/Game.js" />
+        <option value="$PROJECT_DIR$/src/data/model/Player.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls.js" />
+        <option value="$PROJECT_DIR$/src/components/Game.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/data/reducers/game.js" />
+        <option value="$PROJECT_DIR$/src/components/Board.css" />
       </list>
     </option>
   </component>
@@ -297,8 +301,8 @@
         <observation name="false" value="250.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="337.0" />
-        <observation name="false" value="32.0" />
+        <observation name="UNDEFINED" value="500.0" />
+        <observation name="false" value="83.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:liftShorterClasses">
@@ -312,7 +316,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:middleMatching">
@@ -327,7 +331,7 @@
         <observation name="true" value="1.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="false" value="369.0" />
+        <observation name="false" value="583.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:nonGeneric">
@@ -341,7 +345,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_inResolveScope">
@@ -359,8 +363,9 @@
         <observation name="true" value="4.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="false" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="false" value="12.0" />
+        <observation name="true" value="2.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_openedInEditor">
@@ -377,8 +382,9 @@
         <observation name="true" value="25.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="false" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="false" value="4.0" />
+        <observation name="true" value="10.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameDirectory">
@@ -395,8 +401,9 @@
         <observation name="true" value="16.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="false" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="false" value="4.0" />
+        <observation name="true" value="10.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameLogicalRoot">
@@ -412,8 +419,8 @@
         <observation name="false" value="29.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="false" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="false" value="14.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sdkOrLibrary">
@@ -429,8 +436,8 @@
         <observation name="false" value="29.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="false" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="false" value="14.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:templates">
@@ -446,8 +453,8 @@
         <observation name="true" value="118.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="false" value="355.0" />
-        <observation name="true" value="14.0" />
+        <observation name="false" value="547.0" />
+        <observation name="true" value="36.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:accessible">
@@ -461,7 +468,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:expectedType">
@@ -475,7 +482,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:kind">
@@ -489,7 +496,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
@@ -505,8 +512,8 @@
         <observation name="unknown" value="29.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="unknown" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="unknown" value="14.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_javaInheritance">
@@ -522,8 +529,8 @@
         <observation name="null" value="29.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="null" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="null" value="14.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_referenceList">
@@ -539,8 +546,8 @@
         <observation name="unknown" value="29.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="unknown" value="1.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="unknown" value="14.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:recursion">
@@ -554,7 +561,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="completionFinishedType">
@@ -574,9 +581,9 @@
         <observation name="typedSelect" value="640.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="cancelled" value="1192.0" />
-        <observation name="explicitSelect" value="44.0" />
-        <observation name="typedSelect" value="325.0" />
+        <observation name="cancelled" value="1836.0" />
+        <observation name="explicitSelect" value="62.0" />
+        <observation name="typedSelect" value="521.0" />
       </dailyData>
     </factor>
     <factor id="completionType">
@@ -590,7 +597,7 @@
         <observation name="BASIC" value="1187.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="BASIC" value="544.0" />
+        <observation name="BASIC" value="858.0" />
       </dailyData>
     </factor>
     <factor id="completionUsage">
@@ -604,7 +611,7 @@
         <observation name="count" value="2785.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="count" value="1561.0" />
+        <observation name="count" value="2419.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -628,9 +635,9 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="337.0" />
+        <observation name="UNDEFINED" value="500.0" />
         <observation name="average" value="0.0" />
-        <observation name="count" value="63.0" />
+        <observation name="count" value="165.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -657,9 +664,9 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="337.0" />
+        <observation name="UNDEFINED" value="500.0" />
         <observation name="average" value="0.0" />
-        <observation name="count" value="63.0" />
+        <observation name="count" value="165.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -676,7 +683,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:nameEnd">
@@ -690,7 +697,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:position">
@@ -716,11 +723,11 @@
         <observation name="variance" value="0.270078" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="0.048847" />
-        <observation name="count" value="737.0" />
+        <observation name="average" value="0.061803" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="3.0" />
         <observation name="min" value="0.0" />
-        <observation name="variance" value="0.060117" />
+        <observation name="variance" value="0.066091" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prefix">
@@ -746,11 +753,11 @@
         <observation name="variance" value="7954.133824" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="-1125.450475" />
-        <observation name="count" value="737.0" />
+        <observation name="average" value="-1132.727039" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="-1302.0" />
-        <observation name="variance" value="15716.939404" />
+        <observation name="variance" value="14067.007418" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:priority">
@@ -776,11 +783,11 @@
         <observation name="variance" value="�" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="-48.023066" />
-        <observation name="count" value="737.0" />
-        <observation name="max" value="110.0" />
+        <observation name="average" value="-44.593133" />
+        <observation name="count" value="1165.0" />
+        <observation name="max" value="111.0" />
         <observation name="min" value="-103.0" />
-        <observation name="variance" value="2243.164904" />
+        <observation name="variance" value="2537.651009" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_explicitlyImported">
@@ -804,12 +811,12 @@
         <observation name="variance" value="14083.527745" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="1.0" />
-        <observation name="max" value="0.0" />
+        <observation name="UNDEFINED" value="569.0" />
+        <observation name="average" value="177.777778" />
+        <observation name="count" value="27.0" />
+        <observation name="max" value="300.0" />
         <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
+        <observation name="variance" value="13794.778347" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_knownElement">
@@ -833,9 +840,9 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
+        <observation name="UNDEFINED" value="569.0" />
         <observation name="average" value="0.0" />
-        <observation name="count" value="1.0" />
+        <observation name="count" value="27.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -862,9 +869,9 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
+        <observation name="UNDEFINED" value="569.0" />
         <observation name="average" value="2.0" />
-        <observation name="count" value="1.0" />
+        <observation name="count" value="27.0" />
         <observation name="max" value="2.0" />
         <observation name="min" value="2.0" />
         <observation name="variance" value="0.0" />
@@ -891,9 +898,9 @@
         <observation name="variance" value="0.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="368.0" />
+        <observation name="UNDEFINED" value="569.0" />
         <observation name="average" value="0.0" />
-        <observation name="count" value="1.0" />
+        <observation name="count" value="27.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -923,7 +930,7 @@
       </dailyData>
       <dailyData date="6-7-2018">
         <observation name="average" value="0.0" />
-        <observation name="count" value="737.0" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -952,11 +959,11 @@
         <observation name="variance" value="11.374942" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="6.799186" />
-        <observation name="count" value="737.0" />
+        <observation name="average" value="6.771674" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="26.0" />
         <observation name="min" value="1.0" />
-        <observation name="variance" value="13.902862" />
+        <observation name="variance" value="13.651057" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:sameWords">
@@ -970,7 +977,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:shorter">
@@ -984,7 +991,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:simple">
@@ -998,7 +1005,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:sorter">
@@ -1025,7 +1032,7 @@
       </dailyData>
       <dailyData date="6-7-2018">
         <observation name="average" value="1.0" />
-        <observation name="count" value="737.0" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="1.0" />
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.0" />
@@ -1042,7 +1049,7 @@
         <observation name="UNDEFINED" value="717.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="UNDEFINED" value="369.0" />
+        <observation name="UNDEFINED" value="583.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:stats">
@@ -1068,11 +1075,11 @@
         <observation name="variance" value="6748456.841093" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="1354.735414" />
-        <observation name="count" value="737.0" />
+        <observation name="average" value="1268.130472" />
+        <observation name="count" value="1165.0" />
         <observation name="max" value="10000.0" />
         <observation name="min" value="0.0" />
-        <observation name="variance" value="10622053.832189" />
+        <observation name="variance" value="10475714.49024" />
       </dailyData>
     </factor>
     <factor id="itemPosition">
@@ -1101,9 +1108,9 @@
         <observation name="9" value="1.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="0" value="37.0" />
-        <observation name="1" value="5.0" />
-        <observation name="2" value="1.0" />
+        <observation name="0" value="49.0" />
+        <observation name="1" value="10.0" />
+        <observation name="2" value="2.0" />
         <observation name="3" value="1.0" />
       </dailyData>
     </factor>
@@ -1121,8 +1128,8 @@
         <observation name="withMnemonics" value="4.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="total" value="38.0" />
-        <observation name="withMnemonics" value="2.0" />
+        <observation name="total" value="54.0" />
+        <observation name="withMnemonics" value="3.0" />
       </dailyData>
     </factor>
     <factor id="prefixLength">
@@ -1158,18 +1165,20 @@
         <observation name="9" value="2.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="0" value="6.0" />
+        <observation name="0" value="7.0" />
+        <observation name="1" value="1.0" />
         <observation name="11" value="1.0" />
         <observation name="13" value="1.0" />
+        <observation name="14" value="1.0" />
         <observation name="18" value="1.0" />
         <observation name="2" value="7.0" />
-        <observation name="3" value="6.0" />
-        <observation name="4" value="10.0" />
-        <observation name="5" value="2.0" />
-        <observation name="6" value="6.0" />
-        <observation name="7" value="1.0" />
-        <observation name="8" value="2.0" />
-        <observation name="9" value="1.0" />
+        <observation name="3" value="7.0" />
+        <observation name="4" value="13.0" />
+        <observation name="5" value="6.0" />
+        <observation name="6" value="8.0" />
+        <observation name="7" value="4.0" />
+        <observation name="8" value="3.0" />
+        <observation name="9" value="2.0" />
       </dailyData>
     </factor>
     <factor id="timeBetweenTyping">
@@ -1186,8 +1195,8 @@
         <observation name="count" value="3181.0" />
       </dailyData>
       <dailyData date="6-7-2018">
-        <observation name="average" value="129.842162" />
-        <observation name="count" value="1850.0" />
+        <observation name="average" value="131.507099" />
+        <observation name="count" value="2958.0" />
       </dailyData>
     </factor>
   </component>
@@ -1238,7 +1247,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1530881566550" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1530893702887" />
     <property name="ghcModFlags" value="" />
     <property name="ghcModPath" value="" />
     <property name="ghcModiFlags" value="" />
@@ -1336,12 +1345,12 @@
       <updated>1530645964249</updated>
       <workItem from="1530645969452" duration="8780000" />
       <workItem from="1530705146299" duration="1744000" />
-      <workItem from="1530716358563" duration="47187000" />
+      <workItem from="1530716358563" duration="52359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57711000" />
+    <option name="totallyTimeSpent" value="62883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="115" y="57" width="1412" height="1016" extended-state="0" />
@@ -1485,13 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -1509,85 +1511,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Players.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/classnames/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-149">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Board.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/model/Game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/model/Player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/reducers/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Players.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1602,23 +1530,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Controls.js">
+    <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        <state relative-caret-position="396">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Players.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Players.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="378">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/model/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/model/Player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="84" column="27" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/reducers/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Board.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
         </state>
       </provider>
     </entry>

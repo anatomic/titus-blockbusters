@@ -12,9 +12,10 @@ export const PlayerPropTypes = PropTypes.shape({
   colour: PropTypes.string
 });
 
-export const reset = p =>
+export const addPointsAndReset = p =>
   p.cata({
-    Answering: Player.Inactive,
+    Answering: (name, colour, points, oneAway) =>
+      Player.Inactive(name, colour, points + 5, oneAway),
     Inactive: constant(p)
   });
 
@@ -25,3 +26,11 @@ export const toggle = p =>
   });
 
 export const toggleEq = p1 => p2 => (p1 === p2 ? toggle(p2) : p2);
+
+export const toggleFlash = p =>
+  p.cata({
+    Inactive: (name, colour, points, oneAway) =>
+      Player.Inactive(name, colour, points, !oneAway),
+    Answering: (name, colour, points, oneAway) =>
+      Player.Answering(name, colour, points, !oneAway)
+  });

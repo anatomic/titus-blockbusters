@@ -50,6 +50,9 @@ export const Controls = ({
               new Audio(buzzer).play();
               return onPlayerBuzz(snd(players));
             }
+            default: {
+              return null;
+            }
           }
         }}
       />
@@ -69,6 +72,9 @@ export const Controls = ({
             case "enter": {
               new Audio(theme).play();
               return onBlockBusters();
+            }
+            default: {
+              return null;
             }
           }
         }}

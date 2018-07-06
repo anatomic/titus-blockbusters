@@ -1,7 +1,5 @@
 import State from "crocks/State";
 import assoc from "crocks/helpers/assoc";
-import fst from "crocks/Pair/fst";
-import snd from "crocks/Pair/snd";
 import { createReducer } from "../helpers";
 
 import {

@@ -7,7 +7,6 @@ import Board from "./Board";
 import Controls from "./Controls";
 
 import Players from "./Players";
-import { Game } from "../data/model/Game";
 
 const toColourClass = p => objOf(`flash-${p.colour}`, p.oneAway);
 const playerClasses = players =>

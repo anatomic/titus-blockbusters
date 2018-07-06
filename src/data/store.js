@@ -14,8 +14,8 @@ const player2 = Player.Inactive("Account", "white", 0, false);
 
 const initialState = {
   players: Pair(player1, player2),
-  game: Game.Asking(createTilesAndSelectRandom())
-  // game: Game.NotStarted
+  // game: Game.Asking(createTilesAndSelectRandom())
+  game: Game.NotStarted
 };
 
 export const store = createStore(

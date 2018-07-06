@@ -39,7 +39,7 @@
 
 .player-blue.is-active {
   background-image: linear-gradient(
-    to var(--direction),
+    to top,
     var(--blue) var(--start),
     black var(--end)
   );
@@ -48,7 +48,7 @@
 
 .player-white.is-active {
   background-image: linear-gradient(
-    to var(--direction),
+    to top,
     var(--white) var(--start),
     black var(--end)
   );

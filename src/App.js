@@ -7,7 +7,6 @@ import { GameUI } from "./components/Game";
 import intro from "./assets/intro.mp4";
 
 import sbg from "./assets/sbg-logo.png";
-import blockbusters from "./assets/blockbusters.jpg";
 
 class App extends Component {
   renderGame = () => {
@@ -58,7 +57,7 @@ class Splash extends Component {
   render() {
     return <div className="splash-screen">
       <h1 className="blockbusters" onClick={this.props.onClick}>Blockbusters</h1>
-      <img className="logo" src={sbg} onClick={this.props.onClick} />
+      <img className="logo" src={sbg} onClick={this.props.onClick} alt="Sky Betting & Gaming" />
     </div>
   }
 }

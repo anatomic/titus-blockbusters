@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69eea870-636c-4359-9f61-66735b2d6a1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/buzzer.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/buzzer.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/correct-answer.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/correct-answer.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/wrong-answer.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/wrong-answer.mp3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +26,7 @@
         <counts>
           <entry key="css" value="14839" />
           <entry key="html" value="70" />
-          <entry key="js" value="59081" />
+          <entry key="js" value="59189" />
           <entry key="json" value="35" />
         </counts>
       </usages-collector>
@@ -51,7 +46,7 @@
           <entry key="CSS" value="14839" />
           <entry key="HTML" value="70" />
           <entry key="JSON" value="35" />
-          <entry key="JavaScript" value="59081" />
+          <entry key="JavaScript" value="59189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,11 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -551,7 +543,7 @@
         <observation name="typedSelect" value="529.0" />
       </dailyData>
       <dailyData date="9-7-2018">
-        <observation name="cancelled" value="193.0" />
+        <observation name="cancelled" value="195.0" />
         <observation name="explicitSelect" value="15.0" />
         <observation name="typedSelect" value="64.0" />
       </dailyData>
@@ -570,7 +562,7 @@
         <observation name="BASIC" value="882.0" />
       </dailyData>
       <dailyData date="9-7-2018">
-        <observation name="BASIC" value="137.0" />
+        <observation name="BASIC" value="139.0" />
       </dailyData>
     </factor>
     <factor id="completionUsage">
@@ -587,7 +579,7 @@
         <observation name="count" value="2475.0" />
       </dailyData>
       <dailyData date="9-7-2018">
-        <observation name="count" value="272.0" />
+        <observation name="count" value="274.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -1455,12 +1447,12 @@
       <workItem from="1530705146299" duration="1744000" />
       <workItem from="1530716358563" duration="53815000" />
       <workItem from="1531131100804" duration="409000" />
-      <workItem from="1531131797429" duration="1966000" />
+      <workItem from="1531131797429" duration="2167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66714000" />
+    <option name="totallyTimeSpent" value="66915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1135" extended-state="0" />
@@ -1696,11 +1688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

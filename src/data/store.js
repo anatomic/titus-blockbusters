@@ -9,8 +9,8 @@ import { Game } from "./model/Game";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const player1 = Player.Inactive("Bet", "white", 0, false);
-const player2 = Player.Inactive("Account", "blue", 0, false);
+const player1 = Player.Inactive("Account", "white", 0, false);
+const player2 = Player.Inactive("Bet", "blue", 0, false);
 
 const initialState = {
   players: Pair(player1, player2),

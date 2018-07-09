@@ -30,13 +30,16 @@
 
 .logo {
     width: 240px;
+    cursor: pointer;
 }
 
 .blockbusters {
+    cursor: pointer;
     text-align: center;
     color: var(--neutral);
-    text-shadow: 0 0 8px var(--neutral-light);
+    text-shadow: 0 0 10px var(--neutral-light);
     font-family: "Aldrich", sans-serif;
     font-size: 92px;
     text-transform: uppercase;
+    font-weight: normal;
 }

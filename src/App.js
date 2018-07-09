@@ -6,6 +6,9 @@ import "./App.css";
 import { GameUI } from "./components/Game";
 import intro from "./assets/intro.mp4";
 
+import sbg from "./assets/sbg-logo.png";
+import blockbusters from "./assets/blockbusters.jpg";
+
 class App extends Component {
   renderGame = () => {
     return (
@@ -28,7 +31,7 @@ class App extends Component {
       <div className="App">
         {game.cata({
           NotStarted: () => (
-            <div onClick={this.props.playIntro}>Play Intro</div>
+            <Splash onClick={this.props.playIntro}/>
           ),
           Intro: () => (
             <div>
@@ -48,6 +51,15 @@ class App extends Component {
         })}
       </div>
     );
+  }
+}
+
+class Splash extends Component {
+  render() {
+    return <div className="splash-screen">
+      <h1 className="blockbusters" onClick={this.props.onClick}>Blockbusters</h1>
+      <img className="logo" src={sbg} onClick={this.props.onClick} />
+    </div>
   }
 }
 

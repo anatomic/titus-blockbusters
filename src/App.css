@@ -8,17 +8,6 @@
   --radius: 6px;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
 .intro {
     position: fixed;
     right: 0;
@@ -28,4 +17,26 @@
     width: auto;
     height: auto;
     z-index: -10;
+}
+
+.splash-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 240px;
+}
+
+.blockbusters {
+    text-align: center;
+    color: var(--neutral);
+    text-shadow: 0 0 8px var(--neutral-light);
+    font-family: "Aldrich", sans-serif;
+    font-size: 92px;
+    text-transform: uppercase;
 }

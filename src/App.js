@@ -3,6 +3,7 @@ import PropTypes from "proptypes";
 import { connect } from "react-redux";
 import identity from "crocks/combinators/identity";
 import "./App.css";
+import { Controls } from "./components/Controls";
 import { GameUI } from "./components/Game";
 import intro from "./assets/intro.mp4";
 
@@ -30,24 +31,36 @@ class App extends Component {
       <div className="App">
         {game.cata({
           NotStarted: () => (
-            <Splash onClick={this.props.playIntro}/>
-          ),
-          Intro: () => (
             <div>
               <video
                 src={intro}
-                autoPlay={true}
+                autoPlay={false}
                 playsInline={true}
                 className="intro"
-                onEnded={() => this.props.startGame()}
+                ref={v => this.vid = v}
+                onClick={() => this.vid.play()}
+                onEnded={this.props.playIntro}
               />
             </div>
           ),
+          Intro: () => <Splash onClick={this.props.startGame}/>,
           Selectable: this.renderGame,
           Asking: this.renderGame,
           Answering: this.renderGame,
           Complete: this.renderGame
         })}
+        <Controls
+          onTileClick={this.props.onTileClick}
+          onBlockBusters={this.props.onBlockBusters}
+          onCorrectAnswer={this.props.onCorrectAnswer}
+          onIncorrectAnswer={this.props.onIncorrectAnswer}
+          startGame={this.props.startGame}
+          playIntro={() => this.vid && this.vid.play()}
+          onOneAway={this.props.onOneAway}
+          onPlayerBuzz={this.props.onPlayerBuzz}
+          game={this.props.game}
+          players={this.props.players}
+        />
       </div>
     );
   }

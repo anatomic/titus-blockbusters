@@ -8,6 +8,7 @@ import correctAnswer from "../assets/correct-answer.mp3";
 import incorrectAnswer from "../assets/wrong-answer.mp3";
 import buzzer from "../assets/buzzer.mp3";
 import theme from "../assets/theme.mp3";
+import stab from "../assets/stab.mp3";
 
 export const Controls = ({
   game,
@@ -17,10 +18,20 @@ export const Controls = ({
   onPlayerBuzz,
   onTileClick,
   onOneAway,
-  players
+  players,
+  playIntro,
+  startGame
 }) =>
   game.cata({
-    NotStarted: () => null,
+    NotStarted: () => <KeyControls onKeyPress={playIntro} />,
+    Intro: () => (
+      <KeyControls
+        onKeyPress={() => {
+          new Audio(stab).play();
+          startGame();
+        }}
+      />
+    ),
     Selectable: () => (
       <KeyControls
         onKeyPress={key => {

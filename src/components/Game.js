@@ -4,7 +4,6 @@ import PropTypes from "proptypes";
 import assign from "crocks/helpers/assign";
 import objOf from "crocks/helpers/objOf";
 import Board from "./Board";
-import Controls from "./Controls";
 
 import Players from "./Players";
 
@@ -30,16 +29,6 @@ export class GameUI extends Component {
           players={this.props.players}
           onClick={this.props.onPlayerBuzz}
         />
-        <Controls
-          onTileClick={this.props.onTileClick}
-          onBlockBusters={this.props.onBlockBusters}
-          onCorrectAnswer={this.props.onCorrectAnswer}
-          onIncorrectAnswer={this.props.onIncorrectAnswer}
-          onOneAway={this.props.onOneAway}
-          onPlayerBuzz={this.props.onPlayerBuzz}
-          game={this.props.game}
-          players={this.props.players}
-        />
       </div>
     );
   }
@@ -48,10 +37,6 @@ export class GameUI extends Component {
 GameUI.propTypes = {
   game: PropTypes.object,
   players: PropTypes.object,
-  onBlockBusters: PropTypes.func,
-  onCorrectAnswer: PropTypes.func,
-  onIncorrectAnswer: PropTypes.func,
-  onOneAway: PropTypes.func,
   onPlayerBuzz: PropTypes.func,
   onTileClick: PropTypes.func
 };

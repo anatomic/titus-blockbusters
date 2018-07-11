@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Aldrich");
+@font-face {
+    src: url("./assets/Aldrich-Regular.ttf") format("truetype");
+    font-family: "Aldrich";
+    font-weight: 400;
+}
 
 :root {
   --neutral: #f5b745;

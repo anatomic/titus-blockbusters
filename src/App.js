@@ -5,7 +5,7 @@ import identity from "crocks/combinators/identity";
 import "./App.css";
 import { Controls } from "./components/Controls";
 import { GameUI } from "./components/Game";
-import intro from "./assets/intro.mp4";
+import intro from "./assets/intro-new.mp4";
 
 import sbg from "./assets/sbg-logo.png";
 

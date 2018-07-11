@@ -4,12 +4,6 @@ import PropTypes from "proptypes";
 import fst from "crocks/Pair/fst";
 import snd from "crocks/Pair/snd";
 
-import correctAnswer from "../assets/correct-answer.mp3";
-import incorrectAnswer from "../assets/wrong-answer.mp3";
-import buzzer from "../assets/buzzer.mp3";
-import theme from "../assets/theme.mp3";
-import stab from "../assets/stab.mp3";
-
 export const Controls = ({
   game,
   onBlockBusters,
@@ -24,14 +18,7 @@ export const Controls = ({
 }) =>
   game.cata({
     NotStarted: () => <KeyControls onKeyPress={playIntro} />,
-    Intro: () => (
-      <KeyControls
-        onKeyPress={() => {
-          new Audio(stab).play();
-          startGame();
-        }}
-      />
-    ),
+    Intro: () => <KeyControls onKeyPress={startGame} />,
     Selectable: () => (
       <KeyControls
         onKeyPress={key => {
@@ -54,11 +41,9 @@ export const Controls = ({
         onKeyPress={key => {
           switch (key) {
             case "arrowleft": {
-              new Audio(buzzer).play();
               return onPlayerBuzz(fst(players));
             }
             case "arrowright": {
-              new Audio(buzzer).play();
               return onPlayerBuzz(snd(players));
             }
             default: {
@@ -73,15 +58,12 @@ export const Controls = ({
         onKeyPress={key => {
           switch (key) {
             case " ": {
-              new Audio(correctAnswer).play();
               return onCorrectAnswer();
             }
             case "x": {
-              new Audio(incorrectAnswer).play();
               return onIncorrectAnswer();
             }
             case "enter": {
-              new Audio(theme).play();
               return onBlockBusters();
             }
             default: {

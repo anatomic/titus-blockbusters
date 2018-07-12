@@ -31,12 +31,12 @@ class App extends Component {
       <div className="App">
         {game.cata({
           NotStarted: () => (
-            <div>
+            <div className="video-container">
               <video
                 src={intro}
                 autoPlay={false}
                 playsInline={true}
-                className="intro"
+                className="video"
                 ref={v => this.vid = v}
                 onClick={() => this.vid.play()}
                 onEnded={this.props.playIntro}
@@ -60,6 +60,8 @@ class App extends Component {
           onPlayerBuzz={this.props.onPlayerBuzz}
           game={this.props.game}
           players={this.props.players}
+          playTheme={this.props.playTheme}
+          welcomeContestant={this.props.welcomeContestant}
         />
       </div>
     );
@@ -83,7 +85,9 @@ App.propTypes = {
   onTileClick: PropTypes.func,
   players: PropTypes.object,
   playIntro: PropTypes.func,
-  startGame: PropTypes.func
+  playTheme: PropTypes.func,
+  startGame: PropTypes.func,
+  welcomeContestant: PropTypes.func
 };
 
 const mapStateToProps = identity;
@@ -95,7 +99,9 @@ const mapDispatchToProps = dispatch => ({
   onPlayerBuzz: player => dispatch({ type: "BUZZER", payload: player }),
   onTileClick: char => dispatch({ type: "SELECT_TILE", payload: char }),
   playIntro: () => dispatch({ type: "PLAY_INTRO" }),
-  startGame: () => dispatch({ type: "START" })
+  playTheme: () => dispatch({ type: "PLAY_THEME" }),
+  startGame: () => dispatch({ type: "START" }),
+  welcomeContestant: () => dispatch({ type: "WELCOME" })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

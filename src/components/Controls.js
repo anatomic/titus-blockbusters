@@ -14,11 +14,29 @@ export const Controls = ({
   onOneAway,
   players,
   playIntro,
-  startGame
+  playTheme,
+  startGame,
+  welcomeContestant
 }) =>
   game.cata({
     NotStarted: () => <KeyControls onKeyPress={playIntro} />,
-    Intro: () => <KeyControls onKeyPress={startGame} />,
+    Intro: () => (
+      <KeyControls
+        onKeyPress={key => {
+          switch (key) {
+            case " ": {
+              return startGame();
+            }
+            case "t": {
+              return welcomeContestant();
+            }
+            default: {
+              return null;
+            }
+          }
+        }}
+      />
+    ),
     Selectable: () => (
       <KeyControls
         onKeyPress={key => {
@@ -73,18 +91,25 @@ export const Controls = ({
         }}
       />
     ),
-    Complete: () => null
+    Complete: () => (
+      <KeyControls
+        onKeyPress={key => (key === "r" ? startGame() : playTheme())}
+      />
+    )
   });
 
 Controls.propTypes = {
   game: PropTypes.object,
-  players: PropTypes.object,
   onCorrectAnswer: PropTypes.func,
   onIncorrectAnswer: PropTypes.func,
   onOneAway: PropTypes.func,
   onPlayerBuzz: PropTypes.func,
+  onTileClick: PropTypes.func,
+  players: PropTypes.object,
+  playIntro: PropTypes.func,
+  playTheme: PropTypes.func,
   startGame: PropTypes.func,
-  onTileClick: PropTypes.func
+  welcomeContestant: PropTypes.func
 };
 
 const keyListener = fromEvent("keyup", window).map(({ key }) =>

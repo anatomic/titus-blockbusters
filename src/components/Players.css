@@ -8,8 +8,8 @@
   top: 0;
   z-index: -20;
   --direction: top;
-  --start: -100%;
-  --end: 60%;
+  --start: 0%;
+  --end: 70%;
 }
 
 .player {
@@ -24,8 +24,8 @@
   font-family: "Aldrich", sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
-  border-top: 10px solid black;
-  padding-top: 10px;
+  border-top: 20px solid black;
+  padding-top: 20px;
   color: #5a5a5a;
 }
 
@@ -43,7 +43,7 @@
     var(--blue) var(--start),
     black var(--end)
   );
-  border-bottom-color: var(--blue);
+  border-top-color: var(--blue);
 }
 
 .player-white.is-active {
@@ -52,7 +52,7 @@
     var(--white) var(--start),
     black var(--end)
   );
-  border-bottom-color: var(--white);
+  border-top-color: var(--white);
 }
 
 .player-name {

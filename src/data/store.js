@@ -13,18 +13,20 @@ import reducer from "./reducers";
 import correctAnswer from "../assets/correct-answer.mp3";
 import incorrectAnswer from "../assets/wrong-answer.mp3";
 import buzzer from "../assets/buzzer.mp3";
-// import theme from "../assets/theme.mp3";
 import stab from "../assets/stab.mp3";
+import theme from "../assets/theme.mp3";
 
 import { Player } from "./model/Player";
 import { Game } from "./model/Game";
 
 const sounds = {
   START: stab,
+  WELCOME: stab,
   BLOCKBUSTERS: stab,
   CORRECT_ANSWER: correctAnswer,
   INCORRECT_ANSWER: incorrectAnswer,
-  BUZZER: buzzer
+  BUZZER: buzzer,
+  PLAY_THEME: theme
 };
 
 const playSound = pipe(

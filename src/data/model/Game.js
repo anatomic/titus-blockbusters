@@ -14,20 +14,16 @@ const letters = [
   "e",
   "f",
   "g",
-  "h",
   "i",
   "j",
   "k",
   "l",
-  "m",
-  "n",
   "o",
   "p",
   "q",
   "r",
   "s",
   "t",
-  "u",
   "v",
   "w",
   "y"
@@ -75,7 +71,7 @@ export const start = game =>
     Selectable: constant(game),
     Asking: constant(game),
     Answering: constant(game),
-    Complete: constant(game)
+    Complete: () => Game.Asking(createTilesAndSelectRandom())
   });
 
 export const pickTile = char => game =>

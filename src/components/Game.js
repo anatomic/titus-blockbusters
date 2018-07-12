@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import c from "classnames";
 import PropTypes from "proptypes";
+
 import assign from "crocks/helpers/assign";
 import objOf from "crocks/helpers/objOf";
 import Board from "./Board";

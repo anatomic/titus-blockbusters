@@ -7,19 +7,22 @@
     "classnames": "^2.2.6",
     "crocks": "^0.9.4",
     "daggy": "^1.2.0",
+    "micro": "^9.3.2",
     "most": "^1.7.3",
     "proptypes": "^1.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "serve-handler": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "package": "react-scripts build && pkg --out-path bin --targets macos,win serve.js"
   },
   "devDependencies": {
     "eslint": "^5.0.1",
@@ -27,5 +30,9 @@
     "eslint-plugin-prettier": "^2.6.1",
     "eslint-plugin-react": "^7.10.0",
     "prettier": "^1.13.7"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": "build/**/*"
   }
 }

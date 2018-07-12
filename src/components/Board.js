@@ -93,7 +93,7 @@ class BoardTile extends Component {
               <span className="tile-char">{char}</span>
             </div>
           ),
-          Won: colour => <div className={`tile is-won tile--${colour}`} />
+          Won: colour => <div className={`tile tile--${colour}`} />
         })}
       </div>
     );

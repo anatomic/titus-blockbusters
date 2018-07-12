@@ -42,7 +42,7 @@ const player2 = Player.Inactive("Bet", "blue", 0, false);
 
 const initialState = {
   players: Pair(player1, player2),
-  game: Game.NotStarted
+  game: Game.Intro
 };
 
 const soundBoardMiddleware = () => next => action => {

@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "package": "react-scripts build && pkg --out-path bin --targets macos,win serve.js"
+    "package": "react-scripts build && pkg --out-path bin --targets macos,win blockbusters.js"
   },
   "devDependencies": {
     "eslint": "^5.0.1",
